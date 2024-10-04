@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginPage" class="page">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Enter username" required>
+                <input type="password" id="password" placeholder="Enter password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="borrowPage" class="page hidden">
+            <h2>Borrow Book</h2>
+            <input type="text" id="borrowBookName" placeholder="Enter book name">
+            <button onclick="borrowBook()">Borrow Book</button>
+            <div id="borrowMessage"></div>
+            <button onclick="goToSubmit()">Go to Submit Page</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="submitPage" class="page hidden">
+            <h2>Submit Book</h2>
+            <input type="text" id="submitBookName" placeholder="Enter book name">
+            <button onclick="submitBook()">Submit Book</button>
+            <div id="submitMessage"></div>
+            <button onclick="goToBorrow()">Go to Borrow Page</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
